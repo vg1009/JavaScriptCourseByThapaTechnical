@@ -120,11 +120,11 @@
 
   
 
-// NaN === NaN;        
-// Number.NaN === NaN; 
-// isNaN(NaN);         
-// isNaN(Number.NaN);  
-// Number.isNaN(NaN);
+// NaN === NaN; false       
+// Number.NaN === NaN;  false
+// isNaN(NaN);   true      
+// isNaN(Number.NaN);  true
+// Number.isNaN(NaN);  true
 
 
 // console.log(Number.isNaN(NaN));
@@ -149,7 +149,7 @@
 
 
 
-// console.log(5+20);
+// console.log(5+20); //25
 
 
 // 1️⃣Assignment operators
@@ -160,10 +160,10 @@
 // var x = 5; 
 // var y = 5;
 
-// console.log("is both the x and y are equal or not" + x == y );
+// console.log("is both the x and y are equal or not" + x == y );  false cuz + operator is also there
 
 // I will tell you when we will see es6
-// console.log(`Is both the x and y are equal : ${x == y}`);
+// console.log(`Is both the x and y are equal : ${x == y}`); // true 
 
 
 
@@ -180,12 +180,12 @@
 // (either literals or variables) as their operands and 
 // returns a single numerical value.
 
-// console.log(3+3);
-// console.log(10-5);
-// console.log(20/5);
-// console.log(5*6);
+// console.log(3+3); //6
+// console.log(10-5); //5
+// console.log(20/5); //4
+// console.log(5*6); //30
 
-// console.log("Remainder Operator " + 27%4);
+// console.log("Remainder Operator " + 27%4);  //1
 
 
 
@@ -198,9 +198,9 @@
 // the increment operator increments and returns the value before incrementing.
 
 // var num = 15;
-// var newNum = num-- + 5;
-// console.log(num);
-// console.log(newNum);
+// var newNum = num++ + 5; (num+5)
+// console.log(num); 16
+// console.log(newNum); 20
 
 
 // Postfix increment operator means the expression is evaluated 
@@ -211,8 +211,8 @@
 // If used prefix, with operator before operand (for example, ++x), 
 // the increment operator increments and returns the value after incrementing.
 
-// var num = 15;
-// var newNum = --num + 5; 
+// var num = 15; 16
+// var newNum = ++num + 5; 21
 // console.log(num);
 // console.log(newNum);
 
@@ -237,22 +237,22 @@
 // var b = 10;
 
 // Equal (==)
-// console.log(a == b);
+// console.log(a == b); //false
 
 // Not equal (!=)
-// console.log(a != b);
+// console.log(a != b);  //true
 
 // // Greater than (>)
-// console.log(a > b);
+// console.log(a > b); //true
 
 // // Greater than or equal (>=)
-// console.log(a >= b);
+// console.log(a >= b); //true
 
 // // Less than (<)
-// console.log(a < b);
+// console.log(a < b); //true
 
 // // Less than or equal (<=)
-// console.log(a <= b);
+// console.log(a <= b); //false
 
 
 
@@ -723,24 +723,24 @@
 
 // 1️⃣ LET VS CONST  vs  VAR
 
-// var myName = "thapa technical";
+// var myName = "thapa technical"; //thapa technical
+// console.log(myName);
+
+// myName = "thapa technical"; //thapa technical
+// console.log(myName);
+
+// let myName = "thapa technical";  //thapa technical
 // console.log(myName);
 
 // myName = "vinod thapa";
-// console.log(myName);
-
-// let myName = "thapa technical";
-// console.log(myName);
-
-// myName = "vinod thapa";
-// console.log(myName);
+// console.log(myName); //vinod thapa
 
 
 // const myName = "thapa technical";
 // console.log(myName);
 
 // myName = "vinod thapa";
-// console.log(myName);
+// console.log(myName); //error
 
 
 
@@ -752,7 +752,7 @@
 //     const myLastName = "thapa";
 //   }
 
-//   // console.log('innerOuter ' + myLastName);
+//   // console.log('innerOuter ' + myLastName); //error cuz let is block scope
 // }
 
 // console.log(myFirstName);
@@ -796,7 +796,7 @@
 //   return a*b;
 // }
 
-// console.log(mult(3));
+// console.log(mult(3));  //id default param is not passed then it will give Nan as output
 
 
 
